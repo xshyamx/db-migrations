@@ -19,7 +19,7 @@ There are 4 migrations steps
 
 Observations from the flyway community version 8.0.1
 
-- Standard naming convention for sql files V{i}__{name}.sql
+- Standard naming convention for sql files `V{i}__{name}.sql`
 - Rollbacks not supported on community edition (only rolling forward)
 - Supports baselining existing database
 - Can clean entire database
@@ -32,7 +32,7 @@ Observations from the flyway community version 8.0.1
 Observations from the MyBatis Migrations version 3.3.9
 
 - Fixed directory structure for migration directory
-- Standard naming convention for sqls {id}-{name}.sql (can be overriden
+- Standard naming convention for sqls `{id}-{name}.sql` (can be overriden
   by `--idpattern=000` otherwise uses timestamps)
 - Rollbacks supported by providing undo sql as part of same sql file
 - Supports baselining by providing a default `bootstrap.sql`
@@ -46,7 +46,8 @@ Observations from the MyBatis Migrations version 3.3.9
 Observations from the liquibase community version 4.5.0
 
 - No standard directory structure
-- `changeLogFile` needs to be passed for each command
+- `changeLogFile` needs to be passed for each command so, can follow
+  any naming convention (or use same file in case of xml)
 - Separate `liquibase.properties` to configure database connectivity
 - Can cleanup all objects using `drop-all` command
 - Requires tagging of a version before it can be rolled back
