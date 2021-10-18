@@ -7,12 +7,32 @@ migration tools available in the Java ecosystem.
 2. [MyBatis Migrations](http://mybatis.org/migrations/)
 3. [Liquibase](https://www.liquibase.org/)
 
+## Migration Steps ##
+
 There are 4 migrations steps 
 
 1. Create employee table
+
+   ![Employee Table](./docs/img/01.png)
+   
 2. Insert 2 records
+
+	| id | name     | location |
+	|---:|----------|----------|
+	|  1 | John Doe | Texas    |
+	|  2 | Jane Doe | Texas    |
+
 3. Add a new `manager_id` column with foreign key reference itself (employee)
+
+
+   ![Employee Table with foreign key](./docs/img/02.png)
+
 4. Update 1 record to establish a mananger relationship
+
+	| id | name     | location | manager\_id |
+	|---:|----------|----------|------------:|
+	|  1 | John Doe | Texas    |           1 |
+	|  2 | Jane Doe | Texas    |             |
 
 ## Flyway ##
 

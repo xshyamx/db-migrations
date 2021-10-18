@@ -1,0 +1,7 @@
+// -*- mode: dbdiagram -*-
+Table employee {
+  id int [pk]
+  name varchar
+  location varchar
+  manager_id int [ref: > employee.id]
+}
